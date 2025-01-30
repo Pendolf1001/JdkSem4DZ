@@ -21,6 +21,18 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Employee emp1= new Employee(123, "Sara", 13);
+        Employee emp2= new Employee(32465, "John", 1);
+        Employee emp3= new Employee(3221325, "Rick", 13);
+        Employee emp4= new Employee(2344, "Rick", 10);
+        EmployeeDirectory empDir= new EmployeeDirectory();
+        empDir.add(emp1);
+        empDir.add(emp2);
+        empDir.add(emp3);
+        empDir.add(emp4);
+        System.out.println(empDir);
+        System.out.println(empDir.findByExpirience(13));
+        System.out.println(empDir.findNumberByName("Rick"));
+        System.out.println(empDir.findById(2));
     }
 }
